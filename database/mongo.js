@@ -25,8 +25,6 @@ async function connectMongo() {
   await db.collection("books").createIndex({ series: 1, seriesNumber: 1 });
 
   await db.collection("users").createIndex({ email: 1 }, { unique: true });
-
-  // Optional: bootstrap an initial admin user using env vars.
   await ensureAdminFromEnv(db);
 
   return db;
@@ -41,7 +39,6 @@ async function ensureAdminFromEnv(dbInstance) {
     const password = String(process.env.ADMIN_PASSWORD || "");
     const name = String(process.env.ADMIN_NAME || "Admin").trim() || "Admin";
 
-    // If not configured, do nothing.
     if (!email || !password) return;
 
     const users = dbToUse.collection("users");
@@ -63,7 +60,6 @@ async function ensureAdminFromEnv(dbInstance) {
       createdAt: new Date(),
     });
   } catch (err) {
-    // Don't crash the app for this. Just log.
     console.error("Admin bootstrap failed:", err?.message || err);
   }
 }
