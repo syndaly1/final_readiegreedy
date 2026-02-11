@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Explore Shelves - readieg</title>
+<link href="/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="top-nav">
+<div class="nav-inner">
+<div class="nav-left">
+<a class="brand" href="/">readiegreedy</a>
+<a aria-disabled="true" class="nav-link" href="#">My Books</a>
+<a aria-disabled="true" class="nav-link" data-i18n="nav.browse" href="#"><span data-i18n="nav.browse">Browse</span> <span class="caret">▾</span></a>
+<form action="#" class="nav-search" method="GET">
+<input aria-label="Search" class="nav-search-input" data-i18n="nav.searchPlaceholder" data-i18n-attr="placeholder" placeholder="Search" type="search"/>
+<button aria-label="Search" class="nav-search-btn" type="submit">🔎</button>
+</form>
+</div>
+<div class="nav-right">
+<a class="btn btn--tiny btn--ghost" data-i18n="auth.login" href="/login" id="loginLink">Log in</a>
+<a class="btn btn--tiny" data-i18n="auth.signup" href="/signup" id="signupLink">Sign up</a>
+<button class="btn btn--tiny btn--ghost hidden" data-i18n="auth.logout" id="logoutBtn" type="button">Log out</button>
+<select aria-label="Language" class="lang-select" id="langSelect"><option value="en">EN</option><option value="ru">RU</option><option value="kk">KK</option></select><button aria-expanded="false" aria-label="Open menu" class="menu-btn" id="menuBtn">
+<span aria-hidden="true" class="menu-icon">☰</span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="menu" id="menu">
+<div class="menu-grid">
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.browse">Browse</div>
+<a class="menu-link" data-i18n="menu.subjects" href="/subjects">Subjects</a>
+<a class="menu-link" data-i18n="menu.trending" href="/explore">Trending</a>
+<a class="menu-link" data-i18n="menu.libraryExplorer" href="/about">Library Explorer</a>
+<a class="menu-link" data-i18n="menu.lists" href="/lists">Lists</a>
+<a class="menu-link" data-i18n="menu.collections" href="/explore">Collections</a>
+<a class="menu-link" data-i18n="menu.k12" href="/k12">K-12 Student Library</a>
+<a class="menu-link" data-i18n="menu.bookTalks" href="/contact">Book Talks</a>
+<a class="menu-link" data-i18n="menu.randomBook" href="/random">Random Book</a>
+<a class="menu-link" data-i18n="menu.advancedSearch" href="/books">Advanced Search</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.contribute">Contribute</div>
+<a class="menu-link" data-i18n="menu.addBook" href="/books#add">Add a Book</a>
+<a class="menu-link" data-i18n="menu.communityEdits" href="/contact">Recent Community Edits</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.resources">Resources</div>
+<a class="menu-link" data-i18n="menu.helpSupport" href="/contact">Help &amp; Support</a>
+<a class="menu-link" data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+<a class="menu-link" data-i18n="menu.librariansPortal" href="/contact">Librarians Portal</a>
+</div>
+</div>
+</div>
+</header>
+<main class="container">
+<section class="hero hero--compact">
+<h1 class="hero-title">Explore Shelves</h1>
+<p class="tagline">Welcome to readiegreedy catalog!</p>
+</section>
+<section class="shelf">
+<div class="shelf-head">
+<h2>Epic Sagas</h2>
+<a class="btn btn--tiny btn--ghost" href="/books?tag=epic&amp;sort=rating:desc">Add one of your own!</a>
+</div>
+<div class="carousel">
+<button aria-label="Scroll left" class="car-btn left" type="button">‹</button>
+<div class="car-track" data-track="">
+<article class="book-card">
+<div class="book-cover"><img alt="Game of Thrones cover placeholder" src="/photos/got.jpg"/></div>
+<div class="book-card-title">Game of Thrones</div>
+<div class="book-card-sub muted-text">George R.R. Martin</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="The Way of Kings cover placeholder" src="/photos/wok.jpg"/></div>
+<div class="book-card-title">The Way of Kings</div>
+<div class="book-card-sub muted-text">Brandon Sanderson</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="Lord of the Rings cover placeholder" src="/photos/lotr.jpg"/></div>
+<div class="book-card-title">Lord of the Rings</div>
+<div class="book-card-sub muted-text">J.R.R. Tolkien</div>
+</article>
+</div>
+<button aria-label="Scroll right" class="car-btn right" type="button">›</button>
+</div>
+</section>
+<section class="shelf">
+<div class="shelf-head">
+<h2>Dark Fantasy</h2>
+<a class="btn btn--tiny btn--ghost" href="/books?tag=dark&amp;sort=rating:desc">Add one of your own!</a>
+</div>
+<div class="carousel">
+<button aria-label="Scroll left" class="car-btn left" type="button">‹</button>
+<div class="car-track" data-track="">
+<article class="book-card">
+<div class="book-cover"><img alt="The Witcher cover placeholder" src="/photos/witcher.jpg"/></div>
+<div class="book-card-title">The Witcher: The Last Wish</div>
+<div class="book-card-sub muted-text">Andrzej Sapkowski</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="Prince of Thorns cover placeholder" src="/photos/prince-of-thorns.jpg"/></div>
+<div class="book-card-title">Prince of Thorns</div>
+<div class="book-card-sub muted-text">Mark Lawrence</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="The Poppy War cover placeholder" src="/photos/poppy-war.jpg"/></div>
+<div class="book-card-title">The Poppy War</div>
+<div class="book-card-sub muted-text">R.F. Kuang</div>
+</article>
+</div>
+<button aria-label="Scroll right" class="car-btn right" type="button">›</button>
+</div>
+</section>
+<section class="shelf">
+<div class="shelf-head">
+<h2>Heists &amp; Outlaws</h2>
+<a class="btn btn--tiny btn--ghost" href="/books?tag=heist&amp;sort=rating:desc">Add one of your own!</a>
+</div>
+<div class="carousel">
+<button aria-label="Scroll left" class="car-btn left" type="button">‹</button>
+<div class="car-track" data-track="">
+<article class="book-card">
+<div class="book-cover"><img alt="Six of Crows cover placeholder" src="/photos/six-of-crows.jpg"/></div>
+<div class="book-card-title">Six of Crows</div>
+<div class="book-card-sub muted-text">Leigh Bardugo</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="Locke Lamora cover placeholder" src="/photos/locke-lamora.jpg"/></div>
+<div class="book-card-title">The Lies of Locke Lamora</div>
+<div class="book-card-sub muted-text">Scott Lynch</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="Mistborn cover placeholder" src="/photos/mistborn.jpg"/></div>
+<div class="book-card-title">Mistborn: The Final Empire</div>
+<div class="book-card-sub muted-text">Brandon Sanderson</div>
+</article>
+</div>
+<button aria-label="Scroll right" class="car-btn right" type="button">›</button>
+</div>
+</section>
+<section class="shelf">
+<div class="shelf-head">
+<h2>Dragons &amp; Myth</h2>
+<a class="btn btn--tiny btn--ghost" href="/books?tag=dragons&amp;sort=rating:desc">Add one of your own!</a>
+</div>
+<div class="carousel">
+<button aria-label="Scroll left" class="car-btn left" type="button">‹</button>
+<div class="car-track" data-track="">
+<article class="book-card">
+<div class="book-cover"><img alt="Eragon cover placeholder" src="/photos/eragon.jpg"/></div>
+<div class="book-card-title">Eragon</div>
+<div class="book-card-sub muted-text">Christopher Paolini</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="The Hobbit cover placeholder" src="/photos/hobbit.jpg"/></div>
+<div class="book-card-title">The Hobbit</div>
+<div class="book-card-sub muted-text">J.R.R. Tolkien</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="A Song of Ice and Fire cover placeholder" src="/photos/asoiaf.jpg"/></div>
+<div class="book-card-title">A Song of Ice and Fire</div>
+<div class="book-card-sub muted-text">George R.R. Martin</div>
+</article>
+</div>
+<button aria-label="Scroll right" class="car-btn right" type="button">›</button>
+</div>
+</section>
+<section class="shelf">
+<div class="shelf-head">
+<h2>Elemental Battles</h2>
+<a class="btn btn--tiny btn--ghost" href="/books?tag=elements&amp;sort=rating:desc">Add one of your own!</a>
+</div>
+<div class="carousel">
+<button aria-label="Scroll left" class="car-btn left" type="button">‹</button>
+<div class="car-track" data-track="">
+<article class="book-card">
+<div class="book-cover"><img alt="Kyoshi cover placeholder" src="/photos/kyoshi.jpg"/></div>
+<div class="book-card-title">Avatar: The Rise of Kyoshi</div>
+<div class="book-card-sub muted-text">F.C. Yee</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="Alchemy of Souls cover placeholder" src="/photos/alchemy-of-souls.jpg"/></div>
+<div class="book-card-title">Alchemy of Souls</div>
+<div class="book-card-sub muted-text">Hong Sisters</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="Rhythm of War cover placeholder" src="/photos/row.jpg"/></div>
+<div class="book-card-title">Rhythm of War</div>
+<div class="book-card-sub muted-text">Brandon Sanderson</div>
+</article>
+</div>
+<button aria-label="Scroll right" class="car-btn right" type="button">›</button>
+</div>
+</section>
+<section class="shelf">
+<div class="shelf-head">
+<h2>Cursed &amp; Forbidden</h2>
+<a class="btn btn--tiny btn--ghost" href="/books?tag=curses&amp;sort=rating:desc">Add one of your own!</a>
+</div>
+<div class="carousel">
+<button aria-label="Scroll left" class="car-btn left" type="button">‹</button>
+<div class="car-track" data-track="">
+<article class="book-card">
+<div class="book-cover"><img alt="Name of the Wind cover placeholder" src="/photos/name-of-the-wind.jpg"/></div>
+<div class="book-card-title">The Name of the Wind</div>
+<div class="book-card-sub muted-text">Patrick Rothfuss</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="Ninth House cover placeholder" src="/photos/ninth-house.jpg"/></div>
+<div class="book-card-title">Ninth House</div>
+<div class="book-card-sub muted-text">Leigh Bardugo</div>
+</article>
+<article class="book-card">
+<div class="book-cover"><img alt="Dracula cover placeholder" src="/photos/dracula.jpg"/></div>
+<div class="book-card-title">Dracula</div>
+<div class="book-card-sub muted-text">Bram Stoker</div>
+</article>
+</div>
+<button aria-label="Scroll right" class="car-btn right" type="button">›</button>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-col">
+<h4 data-i18n="footer.brand">ReadieGreedy</h4>
+<a data-i18n="footer.about" href="/about">About</a>
+<a data-i18n="footer.vision" href="/vision">Vision</a>
+<a data-i18n="footer.volunteer" href="/volunteer">Volunteer</a>
+<a data-i18n="footer.partner" href="/contact">Partner With Us</a>
+<a data-i18n="footer.careers" href="/careers">Careers</a>
+<a data-i18n="footer.blog" href="/blog">Blog</a>
+<a data-i18n="footer.tos" href="/terms">Terms of Service</a>
+<a data-i18n="footer.donate" href="/donate">Donate</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.discover">Discover</h4>
+<a data-i18n="footer.home" href="/">Home</a>
+<a data-i18n="footer.books" href="/books">Books</a>
+<a data-i18n="footer.authors" href="/authors">Authors</a>
+<a data-i18n="footer.subjects" href="/subjects">Subjects</a>
+<a data-i18n="footer.collections" href="/explore">Collections</a>
+<a data-i18n="footer.advancedSearch" href="/books">Advanced Search</a>
+<a data-i18n="footer.returnTop" href="#">Return to Top</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.develop">Develop</h4>
+<a data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.help">Help</h4>
+<a data-i18n="footer.helpSupport" href="/contact">Help &amp; Support</a>
+<a data-i18n="footer.contact" href="/contact">Contact Us</a>
+<a data-i18n="footer.suggestEdits" href="/contact">Suggesting Edits</a>
+<a data-i18n="footer.addBook" href="/contact">Add a Book</a>
+<a data-i18n="footer.releaseNotes" href="/contact">Release Notes</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.lang">Change Website Language</h4>
+<a data-i18n="footer.english" data-lang="en" href="#">English (en)</a>
+<a data-i18n="footer.russian" data-lang="ru" href="#">Русский (ru)</a>
+<a data-i18n="footer.kazakh" data-lang="kk" href="#">Қазақша (kk)</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>SE-2424 — ReadieGreedy</span>
+</div>
+</footer> <script src="/theme.js"></script>
+<script src="/authclient.js"></script>
+<script src="/nav.js"></script>
+<script src="/explore.js"></script>
+<script src="/i18n.js"></script></body>
+</html>

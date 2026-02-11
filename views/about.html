@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - ReadieGreedy</title>
+<link href="/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="top-nav">
+<div class="nav-inner">
+<div class="nav-left">
+<a class="brand" href="/">readiegreedy</a>
+<a class="nav-link" href="/books">My Books</a>
+<a class="nav-link" data-i18n="nav.myBooks" href="/explore">Explore</a>
+<form action="#" class="nav-search" method="GET">
+<input aria-label="Search" class="nav-search-input" data-i18n="nav.searchPlaceholder" data-i18n-attr="placeholder" placeholder="Search" type="search"/>
+<button class="nav-search-btn" type="submit">🔎</button>
+</form>
+</div>
+<div class="nav-right">
+<a class="btn btn--tiny btn--ghost" data-i18n="auth.login" href="/login" id="loginLink">Log in</a>
+<a class="btn btn--tiny" data-i18n="auth.signup" href="/signup" id="signupLink">Sign up</a>
+<button class="btn btn--tiny btn--ghost hidden" data-i18n="auth.logout" id="logoutBtn" type="button">Log out</button>
+<select aria-label="Language" class="lang-select" id="langSelect"><option value="en">EN</option><option value="ru">RU</option><option value="kk">KK</option></select><button aria-label="Open menu" class="menu-btn" id="menuBtn">
+<span class="menu-icon">☰</span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="menu" id="menu">
+<div class="menu-grid">
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.browse">Browse</div>
+<a class="menu-link" data-i18n="menu.advancedSearch" href="/books">Catalog</a>
+<a class="menu-link" href="/explore">Explore</a>
+<a class="menu-link" data-i18n="menu.libraryExplorer" href="/about">About</a>
+<a class="menu-link" href="/contact">Contact</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.contribute">Contribute</div>
+<a class="menu-link" data-i18n="menu.addBook" href="/books#add">Add a Book</a>
+</div>
+<div class="menu-col">
+<div class="menu-title">Help</div>
+<a class="menu-link" data-i18n="menu.helpSupport" href="/contact">Help &amp; Support</a>
+</div>
+</div>
+</div>
+</header>
+<main class="container">
+<section class="hero hero--compact">
+<h1>About</h1>
+<p>What this library is, why fantasy matters, and how to browse it.</p>
+</section>
+<section class="card">
+<h2>What is a fantasy book?</h2>
+<details class="accordion" open="">
+<summary>
+        Definition <span class="chev">▾</span>
+</summary>
+<div class="acc-body">
+<p class="muted-text">
+          Fantasy is fiction built around elements that do not exist in our world:
+          magic, mythical creatures, invented worlds, and supernatural rules.
+          The focus is not on realism, but on consistent world logic.
+        </p>
+<p class="muted-text" style="margin-top:10px;">
+          In this project, fantasy books are organized by tags such as
+          <strong>epic</strong>, <strong>dark</strong>, <strong>heist</strong>,
+          <strong>dragons</strong>, <strong>elements</strong>, and <strong>curses</strong>.
+        </p>
+</div>
+</details>
+</section>
+<section class="card">
+<h2>Subgenres you can explore</h2>
+<p class="muted-text">Each category links directly to the real catalog.</p>
+<div class="info-grid">
+<details class="accordion">
+<summary>Epic Fantasy <span class="chev">▾</span></summary>
+<div class="acc-body">
+<p class="muted-text">Large-scale conflicts, kingdoms, wars.</p>
+<a class="btn btn--tiny" href="/books?tag=epic&amp;sort=rating:desc">Browse epic</a>
+</div>
+</details>
+<details class="accordion">
+<summary>Dark Fantasy <span class="chev">▾</span></summary>
+<div class="acc-body">
+<p class="muted-text">Bleak tone, moral ambiguity, harsh consequences.</p>
+<a class="btn btn--tiny" href="/books?tag=dark&amp;sort=rating:desc">Browse dark</a>
+</div>
+</details>
+<details class="accordion">
+<summary>Heists &amp; Outlaws <span class="chev">▾</span></summary>
+<div class="acc-body">
+<p class="muted-text">Crime crews, clever plans, chaos.</p>
+<a class="btn btn--tiny" href="/books?tag=heist&amp;sort=rating:desc">Browse heists</a>
+</div>
+</details>
+<details class="accordion">
+<summary>Dragons &amp; Myth <span class="chev">▾</span></summary>
+<div class="acc-body">
+<p class="muted-text">Ancient creatures and mythic magic.</p>
+<a class="btn btn--tiny" href="/books?tag=dragons&amp;sort=rating:desc">Browse myth</a>
+</div>
+</details>
+<details class="accordion">
+<summary>Elemental Battles <span class="chev">▾</span></summary>
+<div class="acc-body">
+<p class="muted-text">Magic systems based on elements.</p>
+<a class="btn btn--tiny" href="/books?tag=elements&amp;sort=rating:desc">Browse elements</a>
+</div>
+</details>
+<details class="accordion">
+<summary>Cursed &amp; Forbidden <span class="chev">▾</span></summary>
+<div class="acc-body">
+<p class="muted-text">Forbidden knowledge and ancient curses.</p>
+<a class="btn btn--tiny" href="/books?tag=curses&amp;sort=rating:desc">Browse curses</a>
+</div>
+</details>
+</div>
+</section>
+<section class="card">
+<h2>How this library works</h2>
+<div class="two-col">
+<div>
+<p class="muted-text">
+          The catalog supports search, filtering, sorting, and full CRUD operations.
+          All data is loaded from a real REST API.
+        </p>
+<div style="margin-top:12px;">
+<a class="btn btn--tiny" href="/books">Open catalog</a>
+</div>
+</div>
+<div class="mini-card">
+<h3 class="mini-title">Demo features</h3>
+<ul class="mini-list">
+<li>Search &amp; filters</li>
+<li>Sorting</li>
+<li>Create / delete books</li>
+<li>API integration</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-col">
+<h4 data-i18n="footer.brand">ReadieGreedy</h4>
+<a data-i18n="footer.about" href="/about">About</a>
+<a data-i18n="footer.vision" href="/vision">Vision</a>
+<a data-i18n="footer.volunteer" href="/volunteer">Volunteer</a>
+<a data-i18n="footer.partner" href="/contact">Partner With Us</a>
+<a data-i18n="footer.careers" href="/careers">Careers</a>
+<a data-i18n="footer.blog" href="/blog">Blog</a>
+<a data-i18n="footer.tos" href="/terms">Terms of Service</a>
+<a data-i18n="footer.donate" href="/donate">Donate</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.discover">Discover</h4>
+<a data-i18n="footer.home" href="/">Home</a>
+<a data-i18n="footer.books" href="/books">Books</a>
+<a data-i18n="footer.authors" href="/authors">Authors</a>
+<a data-i18n="footer.subjects" href="/subjects">Subjects</a>
+<a data-i18n="footer.collections" href="/explore">Collections</a>
+<a data-i18n="footer.advancedSearch" href="/books">Advanced Search</a>
+<a data-i18n="footer.returnTop" href="#">Return to Top</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.develop">Develop</h4>
+<a data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.help">Help</h4>
+<a data-i18n="footer.helpSupport" href="/contact">Help &amp; Support</a>
+<a data-i18n="footer.contact" href="/contact">Contact Us</a>
+<a data-i18n="footer.suggestEdits" href="/contact">Suggesting Edits</a>
+<a data-i18n="footer.addBook" href="/contact">Add a Book</a>
+<a data-i18n="footer.releaseNotes" href="/contact">Release Notes</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.lang">Change Website Language</h4>
+<a data-i18n="footer.english" data-lang="en" href="#">English (en)</a>
+<a data-i18n="footer.russian" data-lang="ru" href="#">Русский (ru)</a>
+<a data-i18n="footer.kazakh" data-lang="kk" href="#">Қазақша (kk)</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>SE-2424 — ReadieGreedy</span>
+</div>
+</footer>
+<script src="/theme.js"></script>
+<script src="/authclient.js"></script>
+<script src="/nav.js"></script>
+<script src="/i18n.js"></script></body>
+</html>

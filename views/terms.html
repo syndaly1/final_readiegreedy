@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Terms of Service - ReadieGreedy</title>
+<link href="/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="top-nav">
+<div class="nav-inner">
+<div class="nav-left">
+<a class="brand" href="/">readiegreedy</a>
+<a class="nav-link" href="/books">My Books</a>
+<a class="nav-link" data-i18n="nav.myBooks" href="/explore">Explore</a>
+<form action="#" class="nav-search" method="GET">
+<input aria-label="Search" class="nav-search-input" data-i18n="nav.searchPlaceholder" data-i18n-attr="placeholder" placeholder="Search" type="search"/>
+<button class="nav-search-btn" type="submit">🔎</button>
+</form>
+</div>
+<div class="nav-right">
+<a class="btn btn--tiny btn--ghost" data-i18n="auth.login" href="/login" id="loginLink">Log in</a>
+<a class="btn btn--tiny" data-i18n="auth.signup" href="/signup" id="signupLink">Sign up</a>
+<button class="btn btn--tiny btn--ghost hidden" data-i18n="auth.logout" id="logoutBtn" type="button">Log out</button>
+<select aria-label="Language" class="lang-select" id="langSelect"><option value="en">EN</option><option value="ru">RU</option><option value="kk">KK</option></select><button aria-label="Open menu" class="menu-btn" id="menuBtn">
+<span class="menu-icon">☰</span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="menu" id="menu">
+<div class="menu-grid">
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.browse">Browse</div>
+<a class="menu-link" data-i18n="menu.advancedSearch" href="/books">Catalog</a>
+<a class="menu-link" href="/explore">Explore</a>
+<a class="menu-link" data-i18n="menu.libraryExplorer" href="/about">About</a>
+<a class="menu-link" href="/contact">Contact</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.contribute">Contribute</div>
+<a class="menu-link" data-i18n="menu.addBook" href="/books#add">Add a Book</a>
+</div>
+<div class="menu-col">
+<div class="menu-title">Help</div>
+<a class="menu-link" data-i18n="menu.helpSupport" href="/contact">Help &amp; Support</a>
+</div>
+</div>
+</div>
+</header>
+<main class="container"><section class="page-hero"><h1>Terms of Service</h1><p class="lead">The usual: be decent, don’t break things, and yes we have rules.</p></section>
+<section class="card wide">
+<h2>Terms of Service</h2>
+<p class="muted">Last updated: <span id="tosDate"></span></p>
+<div class="tos">
+<h3>1. Using the service</h3>
+<p>You may browse, search, and save favorites. Don’t attempt to break the app, scrape it aggressively, or upload illegal content. Yes, we have to say that.</p>
+<h3>2. Accounts</h3>
+<p>You’re responsible for your account activity. Use a real password. We hash it with bcrypt, but we can’t fix “password123” as a lifestyle.</p>
+<h3>3. Content &amp; community edits</h3>
+<p>Community suggestions may be reviewed. We reserve the right to remove edits that are spammy, harmful, or wildly incorrect.</p>
+<h3>4. Donations &amp; coins</h3>
+<p>Coins are a playful site currency used inside the UI. They are not real money, not refundable, and not legally meaningful. Like half the internet, honestly.</p>
+<h3>5. Privacy</h3>
+<p>We store essential account data and sessions. Secrets are kept in environment variables. We try to be competent.</p>
+<h3>6. Liability</h3>
+<p>This is a student project. It’s built carefully, but it’s still not a space shuttle.</p>
+</div>
+<div class="agree-box">
+<label class="agree">
+<input id="agreeChk" type="checkbox"/>
+<span>I agree to the Terms of Service</span>
+</label>
+<button class="btn" disabled="" id="agreeBtn">Save agreement</button>
+<p class="muted" id="agreeStatus"></p>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const d = new Date();
+  const tosDate = document.getElementById("tosDate");
+  if (tosDate) tosDate.textContent = d.toISOString().slice(0,10);
+
+  const chk = document.getElementById("agreeChk");
+  const btn = document.getElementById("agreeBtn");
+  const status = document.getElementById("agreeStatus");
+
+  const accepted = localStorage.getItem("tosAccepted") === "true";
+  if (accepted) {
+    chk.checked = true;
+    btn.disabled = false;
+    status.textContent = "You already agreed. Humans love clicking checkboxes.";
+  }
+
+  chk.addEventListener("change", () => {
+    btn.disabled = !chk.checked;
+  });
+
+  btn.addEventListener("click", () => {
+    if (!chk.checked) return;
+    localStorage.setItem("tosAccepted", "true");
+    status.textContent = "Saved. You may now continue existing on the internet.";
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-col">
+<h4 data-i18n="footer.brand">ReadieGreedy</h4>
+<a data-i18n="footer.about" href="/about">About</a>
+<a data-i18n="footer.vision" href="/vision">Vision</a>
+<a data-i18n="footer.volunteer" href="/volunteer">Volunteer</a>
+<a data-i18n="footer.partner" href="/contact">Partner With Us</a>
+<a data-i18n="footer.careers" href="/careers">Careers</a>
+<a data-i18n="footer.blog" href="/blog">Blog</a>
+<a data-i18n="footer.tos" href="/terms">Terms of Service</a>
+<a data-i18n="footer.donate" href="/donate">Donate</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.discover">Discover</h4>
+<a data-i18n="footer.home" href="/">Home</a>
+<a data-i18n="footer.books" href="/books">Books</a>
+<a data-i18n="footer.authors" href="/authors">Authors</a>
+<a data-i18n="footer.subjects" href="/subjects">Subjects</a>
+<a data-i18n="footer.collections" href="/explore">Collections</a>
+<a data-i18n="footer.advancedSearch" href="/books">Advanced Search</a>
+<a data-i18n="footer.returnTop" href="#">Return to Top</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.develop">Develop</h4>
+<a data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.help">Help</h4>
+<a data-i18n="footer.helpSupport" href="/contact">Help &amp; Support</a>
+<a data-i18n="footer.contact" href="/contact">Contact Us</a>
+<a data-i18n="footer.suggestEdits" href="/contact">Suggesting Edits</a>
+<a data-i18n="footer.addBook" href="/contact">Add a Book</a>
+<a data-i18n="footer.releaseNotes" href="/contact">Release Notes</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.lang">Change Website Language</h4>
+<a data-i18n="footer.english" data-lang="en" href="#">English (en)</a>
+<a data-i18n="footer.russian" data-lang="ru" href="#">Русский (ru)</a>
+<a data-i18n="footer.kazakh" data-lang="kk" href="#">Қазақша (kk)</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>SE-2424 — ReadieGreedy</span>
+</div>
+</footer>
+<script src="/theme.js"></script>
+<script src="/authclient.js"></script>
+<script src="/nav.js"></script>
+<script src="/i18n.js"></script></body>
+</html>

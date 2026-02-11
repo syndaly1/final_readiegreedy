@@ -1,0 +1,39 @@
+<svg
+  width="360"
+  height="80"
+  viewBox="0 0 360 80"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="readiegreedy logo"
+>
+  <defs>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffcf6b"/>
+      <stop offset="100%" stop-color="#b57a1a"/>
+    </linearGradient>
+  </defs>
+
+  <g
+    fill="none"
+    stroke="url(#amber)"
+    stroke-width="3"
+    stroke-linejoin="miter"
+  >
+    <path d="M20 14 L90 10 L90 70 L20 66 Z"/>
+    <path d="M90 10 L160 14 L160 66 L90 70 Z"/>
+    <line x1="90" y1="10" x2="90" y2="70"/>
+  </g>
+
+  <text
+    x="180"
+    y="52"
+    text-anchor="start"
+    font-family="Cinzel, 'Segoe UI', Arial, serif"
+    font-size="26"
+    font-weight="700"
+    letter-spacing="1.2"
+    fill="url(#amber)"
+  >
+    readiegreedy
+  </text>
+</svg>

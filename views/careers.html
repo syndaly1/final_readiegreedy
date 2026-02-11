@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careers - ReadieGreedy</title>
+<link href="/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="top-nav">
+<div class="nav-inner">
+<div class="nav-left">
+<a class="brand" href="/">readiegreedy</a>
+<a class="nav-link" href="/books">My Books</a>
+<a class="nav-link" data-i18n="nav.myBooks" href="/explore">Explore</a>
+<form action="#" class="nav-search" method="GET">
+<input aria-label="Search" class="nav-search-input" data-i18n="nav.searchPlaceholder" data-i18n-attr="placeholder" placeholder="Search" type="search"/>
+<button class="nav-search-btn" type="submit">🔎</button>
+</form>
+</div>
+<div class="nav-right">
+<a class="btn btn--tiny btn--ghost" data-i18n="auth.login" href="/login" id="loginLink">Log in</a>
+<a class="btn btn--tiny" data-i18n="auth.signup" href="/signup" id="signupLink">Sign up</a>
+<button class="btn btn--tiny btn--ghost hidden" data-i18n="auth.logout" id="logoutBtn" type="button">Log out</button>
+<select aria-label="Language" class="lang-select" id="langSelect"><option value="en">EN</option><option value="ru">RU</option><option value="kk">KK</option></select><button aria-label="Open menu" class="menu-btn" id="menuBtn">
+<span class="menu-icon">☰</span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="menu" id="menu">
+<div class="menu-grid">
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.browse">Browse</div>
+<a class="menu-link" data-i18n="menu.advancedSearch" href="/books">Catalog</a>
+<a class="menu-link" href="/explore">Explore</a>
+<a class="menu-link" data-i18n="menu.libraryExplorer" href="/about">About</a>
+<a class="menu-link" href="/contact">Contact</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.contribute">Contribute</div>
+<a class="menu-link" data-i18n="menu.addBook" href="/books#add">Add a Book</a>
+</div>
+<div class="menu-col">
+<div class="menu-title">Help</div>
+<a class="menu-link" data-i18n="menu.helpSupport" href="/contact">Help &amp; Support</a>
+</div>
+</div>
+</div>
+</header>
+<main class="container"><section class="page-hero"><h1>Careers</h1><p class="lead">Build reader-first tools. Ship good work. Sleep occasionally.</p></section>
+<section class="content-grid">
+<div class="card">
+<h2>Working here</h2>
+<p>We build tools for readers. It’s half craft, half chaos control. If you enjoy shipping clean UI, secure APIs, and arguing about book tags, you’ll fit in.</p>
+<div class="mini-grid">
+<div class="mini"><div class="mini-title">Remote-friendly</div><p>Work from anywhere with Wi‑Fi and reasonable life choices.</p></div>
+<div class="mini"><div class="mini-title">Learning culture</div><p>We document decisions and treat security like it matters. Wild.</p></div>
+<div class="mini"><div class="mini-title">Impact</div><p>Your work shows up in the product, not in a forgotten Jira graveyard.</p></div>
+</div>
+</div>
+<div class="card">
+<h2>Open roles</h2>
+<div class="job">
+<div class="job-top">
+<div>
+<div class="job-title">Frontend Engineer</div>
+<div class="muted">Web UI • Accessibility • Performance</div>
+</div>
+<span class="badge">Full‑time</span>
+</div>
+<p>Build reader-first experiences using modern JS, clean components, and a ruthless hatred of layout bugs.</p>
+</div>
+<div class="job">
+<div class="job-top">
+<div>
+<div class="job-title">Backend Engineer (Node/Express)</div>
+<div class="muted">API • Security • MongoDB</div>
+</div>
+<span class="badge">Full‑time</span>
+</div>
+<p>Own authentication, authorization, data modeling, and safe endpoint design. You get to say “no” to insecure ideas.</p>
+</div>
+<div class="job">
+<div class="job-top">
+<div>
+<div class="job-title">Community Curator</div>
+<div class="muted">Collections • Editorial • Moderation</div>
+</div>
+<span class="badge">Part‑time</span>
+</div>
+<p>Curate lists, spotlight authors, and keep community edits useful.</p>
+</div>
+</div>
+</section>
+<section class="card wide">
+<h2>Apply</h2>
+<p>Demo form. Saves locally so you can show it during defense.</p>
+<form class="form-grid" id="careerForm">
+<label>Full name <input placeholder="Your name" required="" type="text"/></label>
+<label>Email <input placeholder="you@example.com" required="" type="email"/></label>
+<label>Role <select required="">
+<option value="">Select role</option>
+<option>Frontend Engineer</option>
+<option>Backend Engineer</option>
+<option>Community Curator</option>
+</select></label>
+<label class="full">Why you? <textarea placeholder="A few lines. Keep it human." required="" rows="4"></textarea></label>
+<button class="btn" type="submit">Send</button>
+<p class="muted" id="careerStatus"></p>
+</form>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("careerForm");
+  const status = document.getElementById("careerStatus");
+  if (!form) return;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    status.textContent = "Application saved locally. In real life, HR would now pretend to be busy.";
+    form.reset();
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-col">
+<h4 data-i18n="footer.brand">ReadieGreedy</h4>
+<a data-i18n="footer.about" href="/about">About</a>
+<a data-i18n="footer.vision" href="/vision">Vision</a>
+<a data-i18n="footer.volunteer" href="/volunteer">Volunteer</a>
+<a data-i18n="footer.partner" href="/contact">Partner With Us</a>
+<a data-i18n="footer.careers" href="/careers">Careers</a>
+<a data-i18n="footer.blog" href="/blog">Blog</a>
+<a data-i18n="footer.tos" href="/terms">Terms of Service</a>
+<a data-i18n="footer.donate" href="/donate">Donate</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.discover">Discover</h4>
+<a data-i18n="footer.home" href="/">Home</a>
+<a data-i18n="footer.books" href="/books">Books</a>
+<a data-i18n="footer.authors" href="/authors">Authors</a>
+<a data-i18n="footer.subjects" href="/subjects">Subjects</a>
+<a data-i18n="footer.collections" href="/explore">Collections</a>
+<a data-i18n="footer.advancedSearch" href="/books">Advanced Search</a>
+<a data-i18n="footer.returnTop" href="#">Return to Top</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.develop">Develop</h4>
+<a data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.help">Help</h4>
+<a data-i18n="footer.helpSupport" href="/contact">Help &amp; Support</a>
+<a data-i18n="footer.contact" href="/contact">Contact Us</a>
+<a data-i18n="footer.suggestEdits" href="/contact">Suggesting Edits</a>
+<a data-i18n="footer.addBook" href="/contact">Add a Book</a>
+<a data-i18n="footer.releaseNotes" href="/contact">Release Notes</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.lang">Change Website Language</h4>
+<a data-i18n="footer.english" data-lang="en" href="#">English (en)</a>
+<a data-i18n="footer.russian" data-lang="ru" href="#">Русский (ru)</a>
+<a data-i18n="footer.kazakh" data-lang="kk" href="#">Қазақша (kk)</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>SE-2424 — ReadieGreedy</span>
+</div>
+</footer>
+<script src="/theme.js"></script>
+<script src="/authclient.js"></script>
+<script src="/nav.js"></script>
+<script src="/i18n.js"></script></body>
+</html>

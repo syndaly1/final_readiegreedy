@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volunteer - ReadieGreedy</title>
+<link href="/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="top-nav">
+<div class="nav-inner">
+<div class="nav-left">
+<a class="brand" href="/">readiegreedy</a>
+<a class="nav-link" href="/books">My Books</a>
+<a class="nav-link" data-i18n="nav.myBooks" href="/explore">Explore</a>
+<form action="#" class="nav-search" method="GET">
+<input aria-label="Search" class="nav-search-input" data-i18n="nav.searchPlaceholder" data-i18n-attr="placeholder" placeholder="Search" type="search"/>
+<button class="nav-search-btn" type="submit">🔎</button>
+</form>
+</div>
+<div class="nav-right">
+<a class="btn btn--tiny btn--ghost" data-i18n="auth.login" href="/login" id="loginLink">Log in</a>
+<a class="btn btn--tiny" data-i18n="auth.signup" href="/signup" id="signupLink">Sign up</a>
+<button class="btn btn--tiny btn--ghost hidden" data-i18n="auth.logout" id="logoutBtn" type="button">Log out</button>
+<select aria-label="Language" class="lang-select" id="langSelect"><option value="en">EN</option><option value="ru">RU</option><option value="kk">KK</option></select><button aria-label="Open menu" class="menu-btn" id="menuBtn">
+<span class="menu-icon">☰</span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="menu" id="menu">
+<div class="menu-grid">
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.browse">Browse</div>
+<a class="menu-link" data-i18n="menu.advancedSearch" href="/books">Catalog</a>
+<a class="menu-link" href="/explore">Explore</a>
+<a class="menu-link" data-i18n="menu.libraryExplorer" href="/about">About</a>
+<a class="menu-link" href="/contact">Contact</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.contribute">Contribute</div>
+<a class="menu-link" data-i18n="menu.addBook" href="/books#add">Add a Book</a>
+</div>
+<div class="menu-col">
+<div class="menu-title">Help</div>
+<a class="menu-link" data-i18n="menu.helpSupport" href="/contact">Help &amp; Support</a>
+</div>
+</div>
+</div>
+</header>
+<main class="container"><section class="page-hero"><h1>Volunteer</h1><p class="lead">Help keep the library accurate, welcoming, and actually useful.</p></section>
+<section class="content-grid">
+<div class="card">
+<h2>Why volunteer?</h2>
+<p>ReadieGreedy is a community library. Volunteers help keep book data clean, add missing editions, curate lists, and keep the vibe less chaotic than the internet usually is.</p>
+<ul class="bullets">
+<li>Curate lists &amp; collections</li>
+<li>Verify metadata (authors, series order, tags)</li>
+<li>Moderate community suggestions</li>
+<li>Translate UI strings (yes, humans still do that)</li>
+</ul>
+</div>
+<div class="card">
+<h2>Volunteer roles</h2>
+<div class="mini-grid">
+<div class="mini">
+<div class="mini-title">Curator</div>
+<p>Build themed collections (dark academia, epic quests, cozy fantasy, you name it).</p>
+</div>
+<div class="mini">
+<div class="mini-title">Editor</div>
+<p>Fix duplicates, improve descriptions, and clean up tags.</p>
+</div>
+<div class="mini">
+<div class="mini-title">Moderator</div>
+<p>Review community edits and keep spam out.</p>
+</div>
+<div class="mini">
+<div class="mini-title">Translator</div>
+<p>Help expand languages and keep translations consistent.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="card wide">
+<h2>Apply</h2>
+<p>This is a demo form (no email is sent). It’s here so you can show a complete UI flow during defense.</p>
+<form class="form-grid" id="volunteerForm">
+<label>
+      Name
+      <input placeholder="Your name" required="" type="text"/>
+</label>
+<label>
+      Email
+      <input placeholder="you@example.com" required="" type="email"/>
+</label>
+<label>
+      Role you're interested in
+      <select required="">
+<option value="">Select one</option>
+<option>Curator</option>
+<option>Editor</option>
+<option>Moderator</option>
+<option>Translator</option>
+</select>
+</label>
+<label class="full">
+      Why you?
+      <textarea placeholder="Tell us what you’d contribute." required="" rows="4"></textarea>
+</label>
+<button class="btn" type="submit">Submit</button>
+<p class="muted" id="volunteerStatus"></p>
+</form>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("volunteerForm");
+  const status = document.getElementById("volunteerStatus");
+  if (!form) return;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    status.textContent = "Application saved locally. A real backend would store this. You’re welcome.";
+    form.reset();
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-col">
+<h4 data-i18n="footer.brand">ReadieGreedy</h4>
+<a data-i18n="footer.about" href="/about">About</a>
+<a data-i18n="footer.vision" href="/vision">Vision</a>
+<a data-i18n="footer.volunteer" href="/volunteer">Volunteer</a>
+<a data-i18n="footer.partner" href="/contact">Partner With Us</a>
+<a data-i18n="footer.careers" href="/careers">Careers</a>
+<a data-i18n="footer.blog" href="/blog">Blog</a>
+<a data-i18n="footer.tos" href="/terms">Terms of Service</a>
+<a data-i18n="footer.donate" href="/donate">Donate</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.discover">Discover</h4>
+<a data-i18n="footer.home" href="/">Home</a>
+<a data-i18n="footer.books" href="/books">Books</a>
+<a data-i18n="footer.authors" href="/authors">Authors</a>
+<a data-i18n="footer.subjects" href="/subjects">Subjects</a>
+<a data-i18n="footer.collections" href="/explore">Collections</a>
+<a data-i18n="footer.advancedSearch" href="/books">Advanced Search</a>
+<a data-i18n="footer.returnTop" href="#">Return to Top</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.develop">Develop</h4>
+<a data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.help">Help</h4>
+<a data-i18n="footer.helpSupport" href="/contact">Help &amp; Support</a>
+<a data-i18n="footer.contact" href="/contact">Contact Us</a>
+<a data-i18n="footer.suggestEdits" href="/contact">Suggesting Edits</a>
+<a data-i18n="footer.addBook" href="/contact">Add a Book</a>
+<a data-i18n="footer.releaseNotes" href="/contact">Release Notes</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.lang">Change Website Language</h4>
+<a data-i18n="footer.english" data-lang="en" href="#">English (en)</a>
+<a data-i18n="footer.russian" data-lang="ru" href="#">Русский (ru)</a>
+<a data-i18n="footer.kazakh" data-lang="kk" href="#">Қазақша (kk)</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>SE-2424 — ReadieGreedy</span>
+</div>
+</footer>
+<script src="/theme.js"></script>
+<script src="/authclient.js"></script>
+<script src="/nav.js"></script>
+<script src="/i18n.js"></script></body>
+</html>

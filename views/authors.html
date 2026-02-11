@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Authors - ReadieGreedy</title>
+<link href="/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="top-nav">
+<div class="nav-inner">
+<div class="nav-left">
+<a class="brand" href="/">readiegreedy</a>
+<a class="nav-link" href="/books">My Books</a>
+<a class="nav-link" data-i18n="nav.myBooks" href="/explore">Explore</a>
+<form action="#" class="nav-search" method="GET">
+<input aria-label="Search" class="nav-search-input" data-i18n="nav.searchPlaceholder" data-i18n-attr="placeholder" placeholder="Search" type="search"/>
+<button class="nav-search-btn" type="submit">🔎</button>
+</form>
+</div>
+<div class="nav-right">
+<a class="btn btn--tiny btn--ghost" data-i18n="auth.login" href="/login" id="loginLink">Log in</a>
+<a class="btn btn--tiny" data-i18n="auth.signup" href="/signup" id="signupLink">Sign up</a>
+<button class="btn btn--tiny btn--ghost hidden" data-i18n="auth.logout" id="logoutBtn" type="button">Log out</button>
+<select aria-label="Language" class="lang-select" id="langSelect"><option value="en">EN</option><option value="ru">RU</option><option value="kk">KK</option></select><button aria-label="Open menu" class="menu-btn" id="menuBtn">
+<span class="menu-icon">☰</span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="menu" id="menu">
+<div class="menu-grid">
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.browse">Browse</div>
+<a class="menu-link" data-i18n="menu.advancedSearch" href="/books">Catalog</a>
+<a class="menu-link" href="/explore">Explore</a>
+<a class="menu-link" data-i18n="menu.libraryExplorer" href="/about">About</a>
+<a class="menu-link" href="/contact">Contact</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.contribute">Contribute</div>
+<a class="menu-link" data-i18n="menu.addBook" href="/books#add">Add a Book</a>
+</div>
+<div class="menu-col">
+<div class="menu-title">Help</div>
+<a class="menu-link" data-i18n="menu.helpSupport" href="/contact">Help &amp; Support</a>
+</div>
+</div>
+</div>
+</header>
+<main class="container"><section class="page-hero"><h1>Authors</h1><p class="lead">18 authors across eras.</p></section>
+<section class="card wide">
+<div class="era-head">
+<h2>Ancient &amp; Mythic</h2>
+<p class="muted">3 authors</p>
+</div>
+<div class="carousel">
+<div class="carousel-item">
+<img alt="Homer photo placeholder" src="/photos/author_1.jpg"/>
+<div class="author-name">Homer</div>
+<div class="muted">Popular: The Odyssey; The Iliad</div>
+</div>
+<div class="carousel-item">
+<img alt="Ovid photo placeholder" src="/photos/author_2.jpg"/>
+<div class="author-name">Ovid</div>
+<div class="muted">Popular: Metamorphoses</div>
+</div>
+<div class="carousel-item">
+<img alt="Anonymous photo placeholder" src="/photos/author_3.jpg"/>
+<div class="author-name">J. R. R. Tolkien</div>
+<div class="muted">Popular: Beowulf</div>
+</div>
+</div>
+</section>
+<section class="card wide">
+<div class="era-head">
+<h2>Medieval &amp; Folklore</h2>
+<p class="muted">3 authors</p>
+</div>
+<div class="carousel">
+<div class="carousel-item">
+<img alt="Marie de France photo placeholder" src="/photos/author_4.jpg"/>
+<div class="author-name">Marie de France</div>
+<div class="muted">Popular: Lais</div>
+</div>
+<div class="carousel-item">
+<img alt="Thomas Malory photo placeholder" src="/photos/author_5.jpg"/>
+<div class="author-name">Thomas Malory</div>
+<div class="muted">Popular: Le Morte d'Arthur</div>
+</div>
+<div class="carousel-item">
+<img alt="The Brothers Grimm photo placeholder" src="/photos/author_6.jpg"/>
+<div class="author-name">The Brothers Grimm</div>
+<div class="muted">Popular: Grimm's Fairy Tales</div>
+</div>
+</div>
+</section>
+<section class="card wide">
+<div class="era-head">
+<h2>Foundations of Modern Fantasy</h2>
+<p class="muted">3 authors</p>
+</div>
+<div class="carousel">
+<div class="carousel-item">
+<img alt="J. R. R. Tolkien photo placeholder" src="/photos/author_3.jpg"/>
+<div class="author-name">J. R. R. Tolkien</div>
+<div class="muted">Popular: The Hobbit; The Lord of the Rings</div>
+</div>
+<div class="carousel-item">
+<img alt="C. S. Lewis photo placeholder" src="/photos/author_8.jpg"/>
+<div class="author-name">C. S. Lewis</div>
+<div class="muted">Popular: The Chronicles of Narnia</div>
+</div>
+<div class="carousel-item">
+<img alt="Ursula K. Le Guin photo placeholder" src="/photos/author_9.jpg"/>
+<div class="author-name">Ursula K. Le Guin</div>
+<div class="muted">Popular: A Wizard of Earthsea</div>
+</div>
+</div>
+</section>
+<section class="card wide">
+<div class="era-head">
+<h2>20th‑Century Epics</h2>
+<p class="muted">3 authors</p>
+</div>
+<div class="carousel">
+<div class="carousel-item">
+<img alt="Robert Jordan photo placeholder" src="/photos/author_10.jpg"/>
+<div class="author-name">Robert Jordan</div>
+<div class="muted">Popular: The Wheel of Time</div>
+</div>
+<div class="carousel-item">
+<img alt="Terry Pratchett photo placeholder" src="/photos/author_11.jpg"/>
+<div class="author-name">Terry Pratchett</div>
+<div class="muted">Popular: Discworld</div>
+</div>
+<div class="carousel-item">
+<img alt="Anne McCaffrey photo placeholder" src="/photos/author_12.jpg"/>
+<div class="author-name">Anne McCaffrey</div>
+<div class="muted">Popular: Dragonriders of Pern</div>
+</div>
+</div>
+</section>
+<section class="card wide">
+<div class="era-head">
+<h2>Contemporary Masters</h2>
+<p class="muted">3 authors</p>
+</div>
+<div class="carousel">
+<div class="carousel-item">
+<img alt="George R. R. Martin photo placeholder" src="/photos/author_13.jpg"/>
+<div class="author-name">George R. R. Martin</div>
+<div class="muted">Popular: A Song of Ice and Fire</div>
+</div>
+<div class="carousel-item">
+<img alt="Brandon Sanderson photo placeholder" src="/photos/author_14.jpg"/>
+<div class="author-name">Brandon Sanderson</div>
+<div class="muted">Popular: Mistborn; The Stormlight Archive</div>
+</div>
+<div class="carousel-item">
+<img alt="Patrick Rothfuss photo placeholder" src="/photos/author_15.jpg"/>
+<div class="author-name">Patrick Rothfuss</div>
+<div class="muted">Popular: The Kingkiller Chronicle</div>
+</div>
+</div>
+</section>
+<section class="card wide">
+<div class="era-head">
+<h2>New Wave &amp; Dark Academia</h2>
+<p class="muted">3 authors</p>
+</div>
+<div class="carousel">
+<div class="carousel-item">
+<img alt="Leigh Bardugo photo placeholder" src="/photos/author_16.jpg"/>
+<div class="author-name">Leigh Bardugo</div>
+<div class="muted">Popular: Six of Crows; Ninth House</div>
+</div>
+<div class="carousel-item">
+<img alt="N. K. Jemisin photo placeholder" src="/photos/author_17.jpg"/>
+<div class="author-name">N. K. Jemisin</div>
+<div class="muted">Popular: The Broken Earth</div>
+</div>
+<div class="carousel-item">
+<img alt="R. F. Kuang photo placeholder" src="/photos/author_18.jpg"/>
+<div class="author-name">R. F. Kuang</div>
+<div class="muted">Popular: The Poppy War; Babel</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-col">
+<h4 data-i18n="footer.brand">ReadieGreedy</h4>
+<a data-i18n="footer.about" href="/about">About</a>
+<a data-i18n="footer.vision" href="/vision">Vision</a>
+<a data-i18n="footer.volunteer" href="/volunteer">Volunteer</a>
+<a data-i18n="footer.partner" href="/contact">Partner With Us</a>
+<a data-i18n="footer.careers" href="/careers">Careers</a>
+<a data-i18n="footer.blog" href="/blog">Blog</a>
+<a data-i18n="footer.tos" href="/terms">Terms of Service</a>
+<a data-i18n="footer.donate" href="/donate">Donate</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.discover">Discover</h4>
+<a data-i18n="footer.home" href="/">Home</a>
+<a data-i18n="footer.books" href="/books">Books</a>
+<a data-i18n="footer.authors" href="/authors">Authors</a>
+<a data-i18n="footer.subjects" href="/subjects">Subjects</a>
+<a data-i18n="footer.collections" href="/explore">Collections</a>
+<a data-i18n="footer.advancedSearch" href="/books">Advanced Search</a>
+<a data-i18n="footer.returnTop" href="#">Return to Top</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.develop">Develop</h4>
+<a data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.help">Help</h4>
+<a data-i18n="footer.helpSupport" href="/contact">Help &amp; Support</a>
+<a data-i18n="footer.contact" href="/contact">Contact Us</a>
+<a data-i18n="footer.suggestEdits" href="/contact">Suggesting Edits</a>
+<a data-i18n="footer.addBook" href="/contact">Add a Book</a>
+<a data-i18n="footer.releaseNotes" href="/contact">Release Notes</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.lang">Change Website Language</h4>
+<a data-i18n="footer.english" data-lang="en" href="#">English (en)</a>
+<a data-i18n="footer.russian" data-lang="ru" href="#">Русский (ru)</a>
+<a data-i18n="footer.kazakh" data-lang="kk" href="#">Қазақша (kk)</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>SE-2424 — ReadieGreedy</span>
+</div>
+</footer>
+<script src="/theme.js"></script>
+<script src="/authclient.js"></script>
+<script src="/nav.js"></script>
+<script src="/i18n.js"></script></body>
+</html>

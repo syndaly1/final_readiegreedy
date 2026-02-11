@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vision - readiegreedy</title>
+<link href="/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="top-nav">
+<div class="nav-inner">
+<div class="nav-left">
+<a class="brand" href="/">readiegreedy</a>
+<a class="nav-link" data-i18n="nav.myBooks" href="/explore">My Books</a>
+<a aria-disabled="true" class="nav-link" data-i18n="nav.browse" href="#"><span data-i18n="nav.browse">Browse</span> <span class="caret">▾</span></a>
+<form action="#" class="nav-search" method="GET">
+<input aria-label="Search" class="nav-search-input" data-i18n="nav.searchPlaceholder" data-i18n-attr="placeholder" placeholder="Search" type="search"/>
+<button aria-label="Search" class="nav-search-btn" type="submit">🔎</button>
+</form>
+</div>
+<div class="nav-right">
+<a class="btn btn--tiny btn--ghost" data-i18n="auth.login" href="/login" id="loginLink">Log in</a>
+<a class="btn btn--tiny" data-i18n="auth.signup" href="/signup" id="signupLink">Sign up</a>
+<button class="btn btn--tiny btn--ghost hidden" data-i18n="auth.logout" id="logoutBtn" type="button">Log out</button>
+<select aria-label="Language" class="lang-select" id="langSelect"><option value="en">EN</option><option value="ru">RU</option><option value="kk">KK</option></select><button aria-expanded="false" aria-label="Open menu" class="menu-btn" id="menuBtn">
+<span aria-hidden="true" class="menu-icon">☰</span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="menu" id="menu">
+<div class="menu-grid">
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.browse">Browse</div>
+<a class="menu-link" data-i18n="menu.subjects" href="/subjects">Subjects</a>
+<a class="menu-link" data-i18n="menu.trending" href="/explore">Trending</a>
+<a class="menu-link" data-i18n="menu.libraryExplorer" href="/about">Library Explorer</a>
+<a class="menu-link" data-i18n="menu.lists" href="/lists">Lists</a>
+<a class="menu-link" data-i18n="menu.collections" href="/explore">Collections</a>
+<a class="menu-link" data-i18n="menu.k12" href="/k12">K-12 Student Library</a>
+<a class="menu-link" data-i18n="menu.bookTalks" href="/contact">Book Talks</a>
+<a class="menu-link" data-i18n="menu.randomBook" href="/random">Random Book</a>
+<a class="menu-link" data-i18n="menu.advancedSearch" href="/books">Advanced Search</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.contribute">Contribute</div>
+<a class="menu-link" data-i18n="menu.addBook" href="/books#add">Add a Book</a>
+<a class="menu-link" data-i18n="menu.communityEdits" href="/contact">Recent Community Edits</a>
+</div>
+<div class="menu-col">
+<div class="menu-title" data-i18n="menu.resources">Resources</div>
+<a class="menu-link" data-i18n="menu.helpSupport" href="/contact">Help &amp; Support</a>
+<a class="menu-link" data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+<a class="menu-link" data-i18n="menu.librariansPortal" href="/contact">Librarians Portal</a>
+</div>
+</div>
+</div>
+</header>
+<main class="container">
+<section class="hero hero--compact">
+<h1 class="hero-title">Vision</h1>
+<p class="tagline">Light mode vs dark mode</p>
+</section>
+<section class="card">
+<h2>Theme</h2>
+<p class="muted-text" style="margin-top:8px;">Pick a theme.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;">
+<button class="btn" id="setDark" type="button">Dark</button>
+<button class="btn btn--ghost" id="setLight" type="button">Light</button>
+<button class="btn btn--ghost" id="setSystem" type="button">System default</button>
+</div>
+</section>
+<script>
+    (function(){
+      const dark = document.getElementById("setDark");
+      const light = document.getElementById("setLight");
+      const sys = document.getElementById("setSystem");
+
+      function set(t){
+        if (window.theme && typeof window.theme.set === "function") window.theme.set(t);
+      }
+      dark && dark.addEventListener("click", () => set("dark"));
+      light && light.addEventListener("click", () => set("light"));
+      sys && sys.addEventListener("click", () => set(null));
+    })();
+  </script>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-col">
+<h4 data-i18n="footer.brand">ReadieGreedy</h4>
+<a data-i18n="footer.about" href="/about">About</a>
+<a data-i18n="footer.vision" href="/vision">Vision</a>
+<a data-i18n="footer.volunteer" href="/volunteer">Volunteer</a>
+<a data-i18n="footer.partner" href="/contact">Partner With Us</a>
+<a data-i18n="footer.careers" href="/careers">Careers</a>
+<a data-i18n="footer.blog" href="/blog">Blog</a>
+<a data-i18n="footer.tos" href="/terms">Terms of Service</a>
+<a data-i18n="footer.donate" href="/donate">Donate</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.discover">Discover</h4>
+<a data-i18n="footer.home" href="/">Home</a>
+<a data-i18n="footer.books" href="/books">Books</a>
+<a data-i18n="footer.authors" href="/authors">Authors</a>
+<a data-i18n="footer.subjects" href="/subjects">Subjects</a>
+<a data-i18n="footer.collections" href="/explore">Collections</a>
+<a data-i18n="footer.advancedSearch" href="/books">Advanced Search</a>
+<a data-i18n="footer.returnTop" href="#">Return to Top</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.develop">Develop</h4>
+<a data-i18n="menu.developerCenter" href="/devcenter">Developer Center</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.help">Help</h4>
+<a data-i18n="footer.helpSupport" href="/contact">Help &amp; Support</a>
+<a data-i18n="footer.contact" href="/contact">Contact Us</a>
+<a data-i18n="footer.suggestEdits" href="/contact">Suggesting Edits</a>
+<a data-i18n="footer.addBook" href="/contact">Add a Book</a>
+<a data-i18n="footer.releaseNotes" href="/contact">Release Notes</a>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.lang">Change Website Language</h4>
+<a data-i18n="footer.english" data-lang="en" href="#">English (en)</a>
+<a data-i18n="footer.russian" data-lang="ru" href="#">Русский (ru)</a>
+<a data-i18n="footer.kazakh" data-lang="kk" href="#">Қазақша (kk)</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>SE-2424 — ReadieGreedy</span>
+</div>
+</footer>
+<script src="/theme.js"></script>
+<script src="/authclient.js"></script>
+<script src="/nav.js"></script>
+<script src="/i18n.js"></script></body>
+</html>
