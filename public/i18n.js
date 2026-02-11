@@ -57,7 +57,6 @@
       apply(dict);
       wireSwitchers(lang);
     } catch (e) {
-      // If translations fail, don't brick the UI.
       wireSwitchers(lang);
     }
   });

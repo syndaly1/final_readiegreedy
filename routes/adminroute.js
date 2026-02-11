@@ -5,7 +5,6 @@ const { requireAdmin } = require("../middleware/auth");
 
 const router = express.Router();
 
-// Admin: list users
 router.get("/users", requireAdmin, async (req, res) => {
   try {
     const db = getDb();
@@ -31,7 +30,6 @@ router.get("/users", requireAdmin, async (req, res) => {
   }
 });
 
-// Admin: set a user's role
 router.put("/users/:id/role", requireAdmin, async (req, res) => {
   try {
     const { id } = req.params;

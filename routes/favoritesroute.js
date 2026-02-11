@@ -37,7 +37,6 @@ router.post("/:bookId", requireAuth, async (req, res) => {
 
     const userId = new ObjectId(req.session.userId);
 
-    // Prevent duplicates: remove existing, then add with fresh addedAt.
     await favorites.updateOne(
       { userId },
       { $pull: { books: { bookId: new ObjectId(bookId) } } },

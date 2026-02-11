@@ -207,7 +207,6 @@ function validateBookPayload(body) {
   };
 }
 
-// Admin-only: create book
 router.post("/", requireAdmin, async (req, res) => {
   try {
     const db = getDb();
@@ -226,7 +225,6 @@ router.post("/", requireAdmin, async (req, res) => {
   }
 });
 
-// Admin-only: update book
 router.put("/:id", requireAdmin, async (req, res) => {
   try {
     const db = getDb();
@@ -250,7 +248,6 @@ router.put("/:id", requireAdmin, async (req, res) => {
   }
 });
 
-// Admin-only: delete book
 router.delete("/:id", requireAdmin, async (req, res) => {
   try {
     const db = getDb();

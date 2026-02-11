@@ -60,7 +60,6 @@ async function fetchMe() {
     isAdmin = false;
   }
 
-  // UI permissions
   if (!isAdmin) {
     if (createForm) createForm.style.display = "none";
     if (adminHint) adminHint.style.display = "block";
@@ -339,7 +338,6 @@ createForm.addEventListener("submit", async (e) => {
   await loadBooks();
 });
 
-// Initialize
 (async () => {
   await fetchMe();
   await loadBooks();
